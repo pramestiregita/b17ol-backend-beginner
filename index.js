@@ -10,6 +10,7 @@ app.get('/home', (req, res)=>{
 
 app.post('/data', (req, res)=>{
     console.log(req.body)
+    res.send('OK')
 })
 
 app.post('/profile', (req, res)=>{
@@ -28,6 +29,21 @@ app.patch('/profile', (req, res)=>{
         ...req.body
     }
     res.send(data)
+})
+
+app.put('/profile', (req, res)=>{
+    const {name, batch, email} = req.body
+    if(name && batch && email){
+        data = {
+            ...req.body
+        }
+        res.send(data)
+    }else{
+        res.send({
+            succsess: false,
+            message: 'All form must be filled'
+        })
+    }
 })
 
 app.listen(8080, ()=>{
