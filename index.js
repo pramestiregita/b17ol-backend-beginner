@@ -12,6 +12,10 @@ app.post('/data', (req, res)=>{
     console.log(req.body)
 })
 
+app.post('/profile', (req, res)=>{
+    res.send(req.data)
+})
+
 app.listen(8080, ()=>{
     console.log('App Listening on port 8080')
 })
