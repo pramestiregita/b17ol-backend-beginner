@@ -16,6 +16,20 @@ app.post('/profile', (req, res)=>{
     res.send(req.data)
 })
 
+let data = {
+    name: 'Jane',
+    batch: '17.2',
+    email: 'janedoe@mail.com'
+}
+
+app.patch('/profile', (req, res)=>{
+    data = {
+        ...data,
+        ...req.body
+    }
+    res.send(data)
+})
+
 app.listen(8080, ()=>{
     console.log('App Listening on port 8080')
 })
