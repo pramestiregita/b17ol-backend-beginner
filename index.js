@@ -46,6 +46,10 @@ app.put('/profile', (req, res)=>{
     }
 })
 
+app.get('/profile', (req, res)=>{
+    res.send(data)
+})
+
 app.listen(8080, ()=>{
     console.log('App Listening on port 8080')
 })
