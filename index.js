@@ -17,9 +17,9 @@ app.post('/profile', (req, res)=>{
 })
 
 let data = {
-    name: 'Jane',
+    name: 'Rush',
     batch: '17.2',
-    email: 'janedoe@mail.com'
+    email: 'rusher@mail.com'
 }
 
 app.patch('/profile', (req, res)=>{
